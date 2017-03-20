@@ -1,0 +1,17 @@
+/*
+ * Theme Name: My Timber Starter Theme
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
+*/
+
+@import "compass";
+@import "compass/reset";
+
+// Here we import our variable partials
+@import 'partials/fonts';
+@import 'partials/colors';
+
+// Here we import the rest of our partials
+@import "partials/base";
+@import "partials/header";
+@import "partials/nav--main-menu";

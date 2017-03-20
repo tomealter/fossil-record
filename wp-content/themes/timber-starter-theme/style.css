@@ -102,7 +102,7 @@ a {
 }
 
 /* line 28, sass/partials/_base.scss */
-h1, h2, h3, p {
+p {
   margin-bottom: 1.5em;
 }
 
@@ -115,40 +115,138 @@ h1, h2, h3, p {
 
 /* line 1, sass/partials/_header.scss */
 .header {
-  background-color: #333;
-  padding: 3px 0;
+  padding: 25px 0 3px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
 }
 
-/* line 6, sass/partials/_header.scss */
+/* line 10, sass/partials/_header.scss */
 .header__row {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-/* line 12, sass/partials/_header.scss */
-.header__menu-button {
-  background-image: url(images/menu-button.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+/* line 19, sass/partials/_header.scss */
+.header__menu-button .bar {
   display: block;
-  height: 40px;
+  height: 6px;
   width: 40px;
+  background-color: #fff;
+  margin: 15px 0;
+  transition: all 100ms ease-out;
+}
+/* line 27, sass/partials/_header.scss */
+.header__menu-button .bar:before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 40px;
+  background-color: #fff;
+  position: relative;
+  top: -13px;
+  transition: all 100ms ease-out;
+}
+/* line 38, sass/partials/_header.scss */
+.header__menu-button .bar:after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 40px;
+  background-color: #fff;
+  position: relative;
+  top: 7px;
+  transition: all 100ms ease-out;
+}
+/* line 51, sass/partials/_header.scss */
+.header__menu-button:hover .bar,
+.header__menu-button:hover .bar:before,
+.header__menu-button:hover .bar:after {
+  background-color: #EA5757;
+}
+/* line 57, sass/partials/_header.scss */
+.header__menu-button:hover .bar:before {
+  top: -16px;
+}
+/* line 61, sass/partials/_header.scss */
+.header__menu-button:hover .bar:after {
+  top: 10px;
 }
 
-/* line 22, sass/partials/_header.scss */
+/* line 67, sass/partials/_header.scss */
 .header__logo {
-  background-image: url(images/header-logo.svg);
+  background-image: url(images/fossil.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: 50px;
-  width: 70px;
+  height: 45px;
+  width: 45px;
+  opacity: 0;
 }
 
 /* line 1, sass/partials/_nav--main-menu.scss */
 .nav--main-menu {
   display: none;
+}
+
+/* line 1, sass/partials/_hero.scss */
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* line 7, sass/partials/_hero.scss */
+.hero--homepage {
+  min-height: 100vh;
+  width: 100%;
+}
+/* line 11, sass/partials/_hero.scss */
+.hero--homepage:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #608D3D;
+  opacity: .35;
+  z-index: 0;
+}
+/* line 24, sass/partials/_hero.scss */
+.hero--homepage .hero__content {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+/* line 33, sass/partials/_hero.scss */
+.hero--homepage .hero__icon {
+  display: block;
+  background-image: url(images/fossil.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+/* line 44, sass/partials/_hero.scss */
+.hero--homepage .hero__title {
+  color: #fff;
+  font-size: 5em;
+  text-align: center;
+  margin: 25px 0;
+}
+/* line 51, sass/partials/_hero.scss */
+.hero--homepage .hero__sub-title {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
 }

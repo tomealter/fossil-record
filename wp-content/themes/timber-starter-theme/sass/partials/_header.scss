@@ -1,6 +1,10 @@
 .header {
-  background-color: #333;
-  padding: 3px 0;
+  //background-color: #333;
+  padding: 25px 0 3px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
 }
 
 .header__row {
@@ -9,22 +13,64 @@
   justify-content: space-between;
 }
 
+//Humburger Button
 .header__menu-button {
-  background-image: url(images/menu-button.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  height: 40px;
-  width: 40px;
+
+  .bar {
+    display: block;
+    height: 6px;
+    width: 40px;
+    background-color: #fff;
+    margin: 15px 0;
+    transition: all 100ms ease-out;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 40px;
+      background-color: #fff;;
+      position: relative;
+      top: -13px;
+      transition: all 100ms ease-out;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 40px;
+      background-color: #fff;
+      position: relative;
+      top: 7px;
+      transition: all 100ms ease-out;
+    }
+  }
+
+  &:hover {
+    .bar,
+    .bar:before,
+    .bar:after {
+      background-color: #EA5757;
+    }
+
+    .bar:before {
+      top: -16px;
+    }
+
+    .bar:after {
+      top: 10px;
+    }
+  }
 }
 
 .header__logo {
-  background-image: url(images/header-logo.svg);
+  background-image: url(images/fossil.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: 50px;
-  width: 70px;
+  height: 45px;
+  width: 45px;
+  opacity: 0;
 }

@@ -1,0 +1,56 @@
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero--homepage {
+  min-height: 100vh;
+  width: 100%;
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #608D3D;
+    opacity: .35;
+    z-index: 0;
+  }
+
+  .hero__content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .hero__icon {
+    display: block;
+    background-image: url(images/fossil.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    color: #fff;
+    font-size: 5em;
+    text-align: center;
+    margin: 25px 0;
+  }
+
+  .hero__sub-title {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+  }
+}

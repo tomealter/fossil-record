@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <div class="hero hero--homepage" style="background-image: url( {{ post.thumbnail.src }} )">
+    <div class="hero__content">
+      <div class="hero__icon"></div>
+  		<h1 class="hero__title">{{post.get_field('hero_title')}}</h1>
+      <h3 class="hero__sub-title">{{post.get_field('hero_sub_title')}}</h3>
+  	</div>
+  </div>
+
+{% endblock %}

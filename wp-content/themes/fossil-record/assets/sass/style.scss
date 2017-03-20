@@ -1,0 +1,18 @@
+/*
+Theme Name: Peacebone
+Author: Tommy Alter
+Author URI: https://tommyalter.net/
+Description: This theme was found in the dinosaur wing.
+Text Domain: peacebone
+*/
+
+@import "compass";
+@import "compass/reset";
+
+// Here we import our variable partials
+@import "partials/_colors";
+
+// Here we import our non-variable partials
+@import "partials/_base";
+@import "partials/_layout";
+@import "partials/_button";
